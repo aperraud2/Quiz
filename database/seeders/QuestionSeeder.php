@@ -12,6 +12,22 @@ class QuestionSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+
+        DB::table('questions')->truncate();
+
+        $questions = [
+            [
+            'question' => 'In Forrest Gump, what is the name of Forrest Gump and Lt. Dan fishing company?'
+            ],
+            [
+            'question' => 'How many rules are there in the "Fight Club" from the eoponymous movie?'
+            ]
+    
+
+            ];
+
+            foreach ($questions as $question) {
+                $new_question = Question::create($question);
+            }
     }
 }

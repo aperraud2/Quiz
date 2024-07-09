@@ -12,10 +12,19 @@ class QuizSeeder extends Seeder
      */
     public function run(): void
     {
-        $quiz = new Quiz;
-        $quiz->name = 'User';
-        $quiz->email = 'user@email.com';
-        $quiz->password = bcrypt('secret');
-        $quiz->save();
+
+        DB::table('quiz')->truncate();
+
+        $quizs = [
+            [
+            'name' => 'Movies',
+            'description' => 'Quiz about movies'        
+            ]
+
+            ];
+
+            foreach ($quizs as $quiz) {
+                $new_quiz = Quiz::create($quiz);
+            }
     }
 }
