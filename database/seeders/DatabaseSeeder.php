@@ -19,9 +19,10 @@ class DatabaseSeeder extends Seeder
             CategorySeeder::class,
             DifficultySeeder::class,
             TypeSeeder::class,
+            QuizSeeder::class,
             AnswerSeeder::class,
             QuestionSeeder::class,
-            QuizSeeder::class,
+
         ]);
     }
 }

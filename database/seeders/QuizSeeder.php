@@ -18,7 +18,8 @@ class QuizSeeder extends Seeder
         $quizs = [
             [
             'name' => 'Movies',
-            'description' => 'Quiz about movies'        
+            'description' => 'Quiz about movies',
+            'difficulty' => 2      
             ]
 
             ];
