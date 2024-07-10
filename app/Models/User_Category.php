@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class User_Category extends Model
 {
     use HasFactory;
+    protected $table = 'user_category';
 
     public function user()
     {

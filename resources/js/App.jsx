@@ -1,11 +1,18 @@
 import React from 'react';
 import FeatureQuiz from './components/FeatureQuiz'
+import AllQuiz from './components/AllQuiz'
 
 const App = () => (
+
+<div>    
     <header>
         <div className="header__title">
             <div className="header__connection">
-            Connection part
+                <div className="user-photo"></div>
+                <div className="connection-links">
+                    <a className="header__connect" href="#connect">Connect</a>
+                    <a className="header__create" href="#create-account">Create Account</a>
+        </div>
             </div>
             <div className="header__h1">
                 <h1>Squiz Game</h1> 
@@ -25,9 +32,13 @@ const App = () => (
         </nav>
     </header>
 
- )
+<FeatureQuiz/>
+
+{/* <AllQuiz></AllQuiz> */}
+</div>
+)
  
-     return <FeatureQuiz></FeatureQuiz>
+
 
 
 export default App;

@@ -17,7 +17,7 @@ class Quiz extends Model
 
     public function difficulty()
     {
-        return $this->hasOne(Difficulty::class);
+        return $this->belongsTo(Difficulty::class);
     }
 
     public function user_quiz()
@@ -27,6 +27,6 @@ class Quiz extends Model
 
     public function category_quiz()
     {
-        return $this->hasOne(Category_Quiz::class);
+        return $this->belongsToMany(Category_Quiz::class);
     }
 }

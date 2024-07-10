@@ -8,14 +8,15 @@ use Illuminate\Database\Eloquent\Model;
 class Category_Quiz extends Model
 {
     use HasFactory;
+    protected $table = 'category_quiz';
 
     public function quiz()
     {
-        return $this->belongsTo(Quiz::class);
+        return $this->belongsToMany(Quiz::class);
     }
 
     public function category()
     {
-        return $this->belongsTo(Category::class);
+        return $this->belongsToMany(Category::class);
     }
 }
