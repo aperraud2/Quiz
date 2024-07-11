@@ -7,6 +7,7 @@ const QuizCard = () => {
     const [quizzes, setQuiz] = useState([]);
     const [difficulties, setDifficulty] = useState([]);
     const [categories, setCategory] = useState([]);
+    const [featuredQuiz, setFeaturedQuiz] = useState([]);
 
     const loadQuizData = async () => {
         try {
@@ -37,44 +38,56 @@ const QuizCard = () => {
         }
     }
 
+    const randomizedQuiz = (quizzes, count) => {
+        if (quizzes.length < count) {
+            return 
+        }
+        const quizzesCopy = [...quizzes];
+
+        for (let i= quizzesCopy.length -1 ; i>0; i--) {
+            const j = Math.floor(Math.random() * (i+1));
+            [quizzesCopy[i], quizzesCopy[j]] = [quizzesCopy[j], quizzesCopy[i]];
+        }
+        return quizzesCopy.slice(0, count);
+    }
 
     useEffect(() => {
         loadQuizData();
         loadDifficultyData();
         loadCategoryData();
-
     }, [])
+
+    useEffect(() => {
+        if (quizzes.length > 0) {
+            setFeaturedQuiz(randomizedQuiz(quizzes, 3));
+        }
+    }, [quizzes]);
 
     return (
         <div>
             <div className="card">
-                <div className="card-content">
-                    {                    
-                        quizzes.map(quiz => {
+                <div className="card__content">               
+                        { 
+                        featuredQuiz.map((quiz, index) => {
                             return (
-                                  <div>
-                                    <div className="card-title">{quiz.name}</div>
-                                    <div className="card-desc">{quiz.description}</div>
-                                    <div className="category">{quiz.category_quiz.category.name}</div>
-                                    <div className="difficulty">{quiz.difficulty}</div>
-                                    <div className="attempts">Attempts: {quiz.attempts ?? 0}</div>
-                                </div>
-
-                                        
-                                )
-                            }
+                                  <div className="card__info" key={index}>
+                                    <div className="card__title">{quiz.name}</div>
+                                    <div className="card__description">{quiz.description}</div>
+                                    <div className="card__category">{quiz.category_quiz.category?.name}</div>
+                                    <div className="card__difficulty">{quiz.difficulty?.name}</div>
+                                    <div className="card__attempts">Attempts: {quiz.attempts ?? 0}</div>
+                                  </div>
                             )
-                        }
-                    
+                        })
+                    }                                                         
                 </div>
             </div>
-
         </div>
-            )
-
+    )
+}
     
 
-}
+
 
 
 

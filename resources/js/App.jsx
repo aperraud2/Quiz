@@ -4,33 +4,30 @@ import AllQuiz from './components/AllQuiz'
 
 const App = () => (
 
-<div>    
-    <header>
-        <div className="header__title">
-            <div className="header__connection">
-                <div className="user-photo"></div>
-                <div className="connection-links">
-                    <a className="header__connect" href="#connect">Connect</a>
-                    <a className="header__create" href="#create-account">Create Account</a>
-        </div>
+<div>
+
+
+        <header>
+            <div className="profile">
+                <div className="profile-pic">
+                    👤
+                </div>
+                <div className="login">
+                    <a href="#">Connect</a> / <a href="#">create account</a>
+                </div>
             </div>
-            <div className="header__h1">
-                <h1>Squiz Game</h1> 
-            </div>
-        </div>
+            Squiz Game
+        </header>
         <nav>
             <ul>
-                <div className="header__nav">
-                    <li>Homepage</li> |
-                    <li>My profile</li> |
-                    <li>Quick Play</li> |
-                </div>
-                <div className="header__nav_about">
-                    <li>| About</li>
-                </div>
+                <li><a href="#">Homepage</a></li>
+                <li><a href="#">My profile</a></li>
+                <li><a href="#">Quick Play</a></li>
+                <li><a href="#">About</a></li>
             </ul>
         </nav>
-    </header>
+
+
 
 <FeatureQuiz/>
 

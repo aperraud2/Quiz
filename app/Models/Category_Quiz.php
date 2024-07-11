@@ -12,11 +12,11 @@ class Category_Quiz extends Model
 
     public function quiz()
     {
-        return $this->belongsToMany(Quiz::class);
+        return $this->belongsTo(Quiz::class);
     }
 
     public function category()
     {
-        return $this->belongsToMany(Category::class);
+        return $this->belongsTo(Category::class);
     }
 }

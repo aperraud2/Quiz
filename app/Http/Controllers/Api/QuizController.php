@@ -11,7 +11,7 @@ class QuizController extends Controller
     public function index()
     {
 
-        $quizzes = Quiz::with(['category_quiz.category'])
+        $quizzes = Quiz::with(['category_quiz.category', 'difficulty'])
         ->get();
 
 
