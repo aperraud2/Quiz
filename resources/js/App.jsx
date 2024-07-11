@@ -5,19 +5,17 @@ import AllQuiz from './components/AllQuiz'
 const App = () => (
 
 <div>
-
-
-        <header>
-            <div className="profile">
-                <div className="profile-pic">
-                    👤
-                </div>
-                <div className="login">
-                    <a href="#">Connect</a> / <a href="#">create account</a>
-                </div>
+    <header>
+        <div className="profile">
+            <div className="profile-pic">
+                👤
             </div>
-            Squiz Game
-        </header>
+            <div className="login">
+                <a href="#">Connect</a> / <a href="#">create account</a>
+            </div>
+        </div>
+        Squiz Game
+    </header>
         <nav>
             <ul>
                 <li><a href="#">Homepage</a></li>
@@ -26,12 +24,10 @@ const App = () => (
                 <li><a href="#">About</a></li>
             </ul>
         </nav>
-
-
-
-<FeatureQuiz/>
-
-{/* <AllQuiz></AllQuiz> */}
+    <div className = "mainpage">
+        <FeatureQuiz/>
+        <AllQuiz/>
+    </div>
 </div>
 )
  

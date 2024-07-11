@@ -111,9 +111,8 @@ $primary-color: #4CAF50; // Green color
 $secondary-color: #f4f4f4; // Light grey background
 $font-color: #333; // Dark grey for text
 $card-color: #fff;
-$header-font: 'Roboto', sans-serif; // Header font
 $body-font: 'Roboto', sans-serif; // Body font
-$nav-font: #E2DE84;
+$nav-color: #E2DE84;
 
 // Global styles
 body {
@@ -122,6 +121,7 @@ body {
   margin: 0;
   padding: 0;
   color: $font-color;
+  
 }
 
 header {
@@ -131,7 +131,6 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: $header-font;
   font-size: 2em;
   position: relative;
 
@@ -165,7 +164,7 @@ header {
 }
 
 nav {
-  background-color: $nav-font;
+  background-color: $nav-color;
   ul {
     list-style: none;
     padding: 0;
@@ -179,7 +178,7 @@ nav {
         padding: 10px 20px;
         display: block;
         &:hover {
-          background-color: darken($nav-font, 10%);
+          background-color: darken($nav-color, 10%);
             }
         }
       }
@@ -187,36 +186,59 @@ nav {
   }
 
 
-  .feature__quiz {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    .card {
-      background-color: $card-color;
-      border-radius: 10px;
-      width: 20%;
-      padding: 20px;
-      margin-bottom: 40px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      text-align: center;
-        .card__content {
+  .mainpage {
+    width: 80%;
+    margin: auto;
 
-            .card__info {
-
-                .card__title {
-                    font-weight: bold;
-                    margin-bottom: 10px;
-                    color: $primary-color;
-                    }
-                .card__category, .card__attempts, .card__difficulty {
-                    font-size: 0.9em;
-                    margin-bottom: 5px;
-                }
-                .card__description {
-                    font-size: 0.9em;
-                }
-            }
-        }
-        
-    }
   }
+  
+    h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+      text-align: center;
+      color: $primary-color;
+    }
+  
+    .featured__quiz, .all__quiz {
+      display: flex;
+      justify-content: space-around;
+  
+      .card {
+        background-color: #fff;
+        border-radius: 10px;
+        width: 20%; // Ajuster la largeur pour 4 cartes avec gap
+        padding: 20px;
+        margin-bottom: 40px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        min-height: 200px;
+  
+        .card__content {
+          .card__info {
+            .card__title {
+              font-weight: bold;
+              color: $primary-color;
+              margin-bottom: 10px;
+            }
+  
+            .card__description {
+              font-size: 0.9em;
+            }
+  
+            .card__category,
+            .card__attempts,
+            .card__difficulty
+             {
+              font-size: 0.9em;
+              margin-bottom: 5px;
+              color: lighten($font-color, 20%);
+            }
+          }
+        }
+        .card__image {
+          height: 100px;
+          margin-bottom: 10px;
+        }
+      }
+    }
+  
