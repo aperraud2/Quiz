@@ -25,15 +25,16 @@ const AllQuiz = () => {
     return (
         <div>
             <h2>All Quiz</h2>
-                <div className='all__quiz'>
-                    {/* <QuizSearch></QuizSearch> */}
+            <div className='allquiz'>
+                    <QuizSearch></QuizSearch>
+                <div className="quizlist">
                     {quizzes.map((quiz, index) => (
-                    <QuizCard key={index} quiz={quiz} />
-                ))}
+                        <QuizCard key={index} quiz={quiz} />
+                    ))}
                 </div>
+            </div>
         </div>
     )
-
 };
 
 export default AllQuiz;

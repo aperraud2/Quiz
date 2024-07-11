@@ -36,14 +36,17 @@ const QuizSearch = ({ onSearch }) => {
 
 
   return (
-    <div>
-      <input
-        type="text"
-        placeholder="Search for keywords..."
-        value={keywords}
-        onChange={(e) => setKeywords(e.target.value)}
-      />
-      <button onClick={handleSearchClick}>Search</button>
+    <div className='searchQuiz'>
+      <div className="searchQuiz__keyword">
+        <input
+          type="text"
+          placeholder="Search for keywords..."
+          value={keywords}
+          onChange={(e) => setKeywords(e.target.value)}
+        />
+        <button onClick={handleSearchClick}>Search</button>
+      </div>
+
       <select
         value={quizType}
         onChange={(e) => setQuizType(e.target.value)}
@@ -62,7 +65,7 @@ const QuizSearch = ({ onSearch }) => {
           <option key={difficulty.id} value={difficulty.name}>{difficulty.name}</option>
         ))}
       </select>
-      <label>
+      <label className="searchQuiz__show">
         <input
           type="checkbox"
           checked={hideDone}

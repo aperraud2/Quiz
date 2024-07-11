@@ -41,7 +41,7 @@ const FeatureQuiz = () => {
     return (
         <div>
             <h2>Featured Quiz</h2>
-            <div className='featured__quiz'>
+            <div className='quizlist'>
                 {featuredQuiz.map((quiz, index) => (
                     <QuizCard key={index} quiz={quiz} />
                 ))}

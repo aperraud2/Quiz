@@ -107,11 +107,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 // Variables
-$primary-color: #4CAF50; // Green color
-$secondary-color: #f4f4f4; // Light grey background
-$font-color: #333; // Dark grey for text
+$primary-color: #4CAF50; 
+$secondary-color: #f4f4f4; // page background
+$font-color: #333;
 $card-color: #fff;
-$body-font: 'Roboto', sans-serif; // Body font
+$body-font: 'Roboto', sans-serif; 
 $nav-color: #E2DE84;
 
 // Global styles
@@ -147,7 +147,6 @@ header {
       display: inline-block;
       line-height: 50px;
       color: $primary-color;
-      font-size: 1.5em;
       margin-right: 10px;
     }
     .login {
@@ -155,6 +154,7 @@ header {
       a {
         color: #fff;
         text-decoration: none;
+        font-size: 1.2rem;
         &:hover {
           text-decoration: underline;
         }
@@ -189,7 +189,6 @@ nav {
   .mainpage {
     width: 80%;
     margin: auto;
-
   }
   
     h2 {
@@ -199,17 +198,18 @@ nav {
       color: $primary-color;
     }
   
-    .featured__quiz, .all__quiz {
+    .quizlist {
       display: flex;
-      justify-content: space-around;
+      justify-content: space-between;
+      flex-wrap: wrap;
   
       .card {
-        background-color: #fff;
+        background-color: $card-color;
         border-radius: 10px;
-        width: 20%; // Ajuster la largeur pour 4 cartes avec gap
+        width: 20%;
         padding: 20px;
         margin-bottom: 40px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
         text-align: center;
         min-height: 200px;
   
@@ -241,4 +241,27 @@ nav {
         }
       }
     }
-  
+    .searchQuiz {
+      display: flex;
+      justify-content: flex-start;
+      margin-bottom: 20px;
+      gap: 5%;
+
+
+      input[type="text"], select, button {
+        padding: 10px;
+        border: 1px solid lighten($font-color, 50%);
+        border-radius: 5px;
+      }
+
+      .searchQuiz__keyword {
+        margin: 0;
+      }
+      .searchQuiz__show {
+        display: flex;
+        align-items: center;
+        input {
+          margin-left: 10px;
+        }
+      }
+    }
