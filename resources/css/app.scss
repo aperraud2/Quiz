@@ -1,34 +1,31 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
-
-$primary-color: #4CAF50; 
+$primary-color: #4caf50;
 $secondary-color: #f4f4f4; // page background
-$font-color: #333;
+$font-color: #444;
 $card-color: #fff;
-$body-font: 'Roboto', sans-serif; 
-$nav-color: #E2DE84;
-
+$body-font: "Roboto", sans-serif;
+$nav-color: #e2de84;
 
 body {
-  font-family: $body-font;
-  background-color: $secondary-color;
-  margin: 0;
-  padding: 0;
-  color: $font-color;
+    font-family: $body-font;
+    background-color: $secondary-color;
+    margin: 0;
+    padding: 0;
+    color: $font-color;
 }
 
 header {
-
-  .header__title {
-    background-color: $primary-color;
-    color: #fff;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 3em;
-    position: relative;
-    min-height: 60px;
+    .header__title {
+        background-color: $primary-color;
+        color: #fff;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 3em;
+        position: relative;
+        min-height: 60px;
 
         .header__profile {
             height: 100%;
@@ -44,7 +41,8 @@ header {
                 height: 60px;
                 border-radius: 50%;
                 border: 2px solid #000000;
-                background: url('https://via.placeholder.com/60x60') no-repeat center center;
+                background: url("https://via.placeholder.com/60x60") no-repeat
+                    center center;
                 background-size: cover;
             }
 
@@ -58,7 +56,7 @@ header {
                     color: white;
                     font-size: 1.1rem;
                     text-decoration: none;
-      
+
                     &:hover {
                         font-size: 1.2rem;
                     }
@@ -67,153 +65,190 @@ header {
                         color: #3f84e5;
                     }
                 }
-                
+
                 .header__connect {
                     font-size: 1.3rem;
-          
+
                     &:hover {
-                      font-size: 1.4rem;
+                        font-size: 1.4rem;
                     }
                 }
             }
         }
-  }
-  .title {
-    margin-bottom: 20px;
-  }
-
-  nav {
-    background-color: $nav-color;
-    border-radius: 5px;
-    width: 100%;
-    font-size: 1.2em;
-    font-weight: 600;
-
-    ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      justify-content: space-around;
-
-      li {
-        a {
-          text-decoration: none;
-          color: $font-color;
-          padding: 10px 20px;
-          display: block;
-
-          &:hover {
-            background-color: darken($nav-color, 10%);
-          }
-        }
-      }
     }
-  }
+    .title {
+        margin-bottom: 20px;
+    }
+
+    nav {
+        background-color: $nav-color;
+        border-radius: 5px;
+        width: 100%;
+        font-size: 1.2em;
+        font-weight: 600;
+        color: $font-color;
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: space-around;
+
+            li {
+                a {
+                    text-decoration: none;
+                    color: $font-color;
+                    padding: 10px 20px;
+                    display: block;
+
+                    &:hover {
+                        background-color: darken($nav-color, 10%);
+                    }
+                }
+            }
+        }
+    }
 }
 
 .mainpage {
-  width: 80%;
-  margin: auto;
+    width: 80%;
+    margin: auto;
 }
-  
-  h2 {
+
+h2 {
     font-size: 2em;
     margin-bottom: 20px;
     text-align: center;
     color: $primary-color;
-  }
-  
-  .quizlist {
+}
+
+.quizlist {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 
     .card {
-      background-color: $card-color;
-      border-radius: 10px; 
-      width: 20%;
-      padding: 20px;
-      margin-bottom: 40px;
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-      text-align: center;
-      min-height: 200px;
-      min-width: 200px;
-      
-      &:hover{
-        scale: 1.1;
-      }
-      
-      a {
-        text-decoration: none;
-        color: inherit;
+        background-color: $card-color;
+        border-radius: 10px;
+        width: 20%;
+        padding: 20px;
+        margin-bottom: 40px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        min-height: 200px;
+        min-width: 200px;
 
-        &:hover,
-        &:focus,
-        &:active,
-        &:visited {
+        &:hover {
+            scale: 1.1;
+        }
+
+        a {
             text-decoration: none;
             color: inherit;
-        }
-    }
 
-      .card__content {
-        .card__info {
-          .card__title {
-            font-weight: bold;
-            color: $primary-color;
+            &:hover,
+            &:focus,
+            &:active,
+            &:visited {
+                text-decoration: none;
+                color: inherit;
+            }
+        }
+
+        .card__content {
+            .card__info {
+                .card__title {
+                    font-weight: bold;
+                    color: $primary-color;
+                    margin-bottom: 10px;
+                }
+
+                .card__description {
+                    font-size: 0.9em;
+                }
+
+                .card__category,
+                .card__attempts,
+                .card__difficulty {
+                    font-size: 0.9em;
+                    margin-bottom: 5px;
+                    color: lighten($font-color, 20%);
+                }
+            }
+        }
+        .card__image {
+            height: 100px;
             margin-bottom: 10px;
-          }
-
-          .card__description {
-            font-size: 0.9em;
-          }
-
-          .card__category,
-          .card__attempts,
-          .card__difficulty
-           {
-            font-size: 0.9em;
-            margin-bottom: 5px;
-            color: lighten($font-color, 20%);
-          }
         }
-      }
-      .card__image {
-        height: 100px;
-        margin-bottom: 10px;
-      }
     }
-  }
-  .searchQuiz {
+}
+.searchQuiz {
     display: flex;
     justify-content: flex-start;
     margin-bottom: 20px;
     gap: 5%;
 
-  input[type="text"], select {
-    padding: 10px;
-      border: 1px solid lighten($font-color, 50%);
-      border-radius: 5px;
+    input[type="text"],
+    select {
+        padding: 10px;
+        border: 1px solid lighten($font-color, 50%);
+        border-radius: 5px;
     }
-  .searchQuiz__keyword {
-      margin: 0;
+    .searchQuiz__keyword {
+        margin: 0;
     }
-  .searchQuiz__show {
-    display: flex;
-      align-items: center;
-      input {
-        margin-left: 10px;
-      }
+    .searchQuiz__show {
+        display: flex;
+        align-items: center;
+        input {
+            margin-left: 10px;
+        }
     }
-  }
-
+}
 
 .aboutpage {
-  width: 80%;
-  margin: 80px auto;
+    width: 80%;
+    margin: 80px auto;
 
-  h1 {
-    color: $primary-color;
-  }
+    h1 {
+        color: $primary-color;
+    }
+}
+
+.profilepage {
+    margin: 0;
+    h1 {
+        text-align: center;
+        margin: 2%;
+    }
+    h2 {
+      margin: 3%;
+    }
+    .profile__generalstats {
+        ul {
+            width: 80%;
+            display: flex;
+            list-style-type: none;
+            justify-content: space-evenly;
+            font-size: 1.2em;
+        }
+    }
+
+    .profile__bestscores {
+        table {
+            width: 80%;
+            margin-left: 40px;
+            border-collapse: collapse;
+        }
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        th {
+            background-color: $primary-color;
+            text-align: left;
+        }
+    }
 }

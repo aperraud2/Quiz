@@ -17,6 +17,7 @@ const About = () => (
             <br/>
             Thank you for your visit and I hope you have a pleasant time here.
         </p>
+
     </div>
 </div>
 )

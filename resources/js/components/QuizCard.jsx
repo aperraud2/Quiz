@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const QuizCard = ({ quiz }) => {
     return (
         <div className="card">
-            <Link to={{ pathname: '/quiz', state: {quiz:quiz}}}>
+            <Link to='/quiz' state={{ quiz: quiz }}>
                 <div className="card__content">               
                     <div className="card__info">
                         <div className="card__image"></div>
