@@ -10,6 +10,10 @@ class CategoryController extends Controller
 {
     public function index()
     {
-        return Category::all();
+
+            $categories = Category::with(['category_quiz.category'])
+            ->get();
+    
+            return $categories;
     }
 }

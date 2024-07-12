@@ -1,34 +1,27 @@
 import React from 'react';
-import FeatureQuiz from './components/FeatureQuiz'
-import AllQuiz from './components/AllQuiz'
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+
+import Homepage from './pages/Homepage'
+import QuizPage from './pages/QuizPage';
+import Profile from './pages/Profile';
+import About from './pages/About';
+
+import Header from './components/Header'
+
 
 const App = () => (
 
-<div>
-    <header>
-        <div className="profile">
-            <div className="profile-pic">
-                👤
-            </div>
-            <div className="login">
-                <a href="#">Connect</a> / <a href="#">create account</a>
-            </div>
-        </div>
-        Squiz Game
-    </header>
-        <nav>
-            <ul>
-                <li><a href="#">Homepage</a></li>
-                <li><a href="#">My profile</a></li>
-                <li><a href="#">Quick Play</a></li>
-                <li><a href="#">About</a></li>
-            </ul>
-        </nav>
-    <div className = "mainpage">
-        <FeatureQuiz/>
-        <AllQuiz/>
+    <div>
+        <BrowserRouter>
+            <Header/>
+            <Routes>
+                <Route path="/" element={<Homepage />}/>
+                <Route path="/quiz" element={<QuizPage />}/>
+                <Route path="/user" element={<Profile />}/>
+                <Route path="/about" element={<About />}/>
+            </Routes>
+        </BrowserRouter>
     </div>
-</div>
 )
  
 

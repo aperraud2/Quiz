@@ -1,112 +1,6 @@
-// @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
-// $primary-color: #4CAF50; 
-// $secondary-color: #f4f4f4; // page background
-// $nav-color: #E2DE84;
-// $font-color: #333; 
-// $font-family: 'Roboto', sans-serif; 
-
-// body {
-//     font-family: $font-family;
-//     background-color: $secondary-color;
-//     margin: 0;
-//     padding: 0;
-//     color: $font-color;   
-// }
-
-// header {
-//     background-color: $primary-color;
-//     display: flex;
-//     flex-direction: column;
-//     padding: 20px;
-//     justify-content: center;
-//     align-items: center;
-//     font-size: 2em;
-//     position: relative;
-//     border: 2px red solid;
-
-//     .header__title {
-//         display:flex;
-//         border: 2px yellow solid;
-//     }
-
-//         .header__profile {
-//             height: 100%;
-//             position: absolute;
-//             left: 0;
-//             display: flex;
-//             border: 2px blue solid;
-
-//             .header__avatar {
-//                 margin-left: 1em;
-//                 width: 60px;
-//                 height: 60px;
-//                 border-radius: 50%;
-//                 border: 2px solid #000000;
-//                 background: url('https://via.placeholder.com/60x60') no-repeat center center;
-//                 background-size: cover;
-//             }
-
-//             .header_connectionlinks {
-//                 display: flex;
-//                 flex-direction: column;
-//                 gap: 5px;
-//                 margin-left: 10px;
-
-//                 a {
-//                     color: #256ED4;
-//                     text-decoration: underline;
-//                     font-size: 0.8em;
-      
-//                     &:hover {
-//                         font-size: 0.9em;
-//                     }
-
-//                     &:checked {
-//                         color: #256ED4;
-//                     }
-//                 }
-                
-//                 .header__connect {
-//                     font-size: 1em;
-          
-//                     &:hover {
-//                       font-size: 1.1em;
-//                     }
-//                 }
-//             }
-//         }
-// }
-
-// nav {
-//     background-color: $nav-color;
-//     border: 2px black solid;
-    
-//     ul {
-//         list-style: none;
-//         padding: 0;
-//         margin: 0;
-//         display: flex;
-//         justify-content: space-around;
-//             li {
-//                 a {
-//                 text-decoration: none;
-//                 color: $font-color;
-//                 padding: 10px 20px;
-//                 display: block;
-         
-//                 &:hover {
-//                     background-color: darken($nav-color, 10%);
-//                     }
-//                 }
-//             }
-//     }
-// }
-
-
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-// Variables
+
 $primary-color: #4CAF50; 
 $secondary-color: #f4f4f4; // page background
 $font-color: #333;
@@ -114,154 +8,212 @@ $card-color: #fff;
 $body-font: 'Roboto', sans-serif; 
 $nav-color: #E2DE84;
 
-// Global styles
+
 body {
   font-family: $body-font;
   background-color: $secondary-color;
   margin: 0;
   padding: 0;
   color: $font-color;
-  
 }
 
 header {
-  background-color: $primary-color;
-  color: #fff;
-  padding: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 2em;
-  position: relative;
 
-  .profile {
-    position: absolute;
-    left: 20px;
+  .header__title {
+    background-color: $primary-color;
+    color: #fff;
+    padding: 20px;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    .profile-pic {
-      background-color: lighten($primary-color, 40%);
-      border-radius: 50%;
-      width: 50px;
-      height: 50px;
-      display: inline-block;
-      line-height: 50px;
-      color: $primary-color;
-      margin-right: 10px;
-    }
-    .login {
-      color: #fff;
-      a {
-        color: #fff;
-        text-decoration: none;
-        font-size: 1.2rem;
-        &:hover {
-          text-decoration: underline;
+    font-size: 3em;
+    position: relative;
+    min-height: 60px;
+
+        .header__profile {
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0px;
+            display: flex;
+            align-items: center;
+
+            .header__avatar {
+                margin-left: 1em;
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                border: 2px solid #000000;
+                background: url('https://via.placeholder.com/60x60') no-repeat center center;
+                background-size: cover;
+            }
+
+            .header__connectionlinks {
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+                margin-left: 10px;
+
+                a {
+                    color: white;
+                    font-size: 1.1rem;
+                    text-decoration: none;
+      
+                    &:hover {
+                        font-size: 1.2rem;
+                    }
+
+                    &:checked {
+                        color: #3f84e5;
+                    }
+                }
+                
+                .header__connect {
+                    font-size: 1.3rem;
+          
+                    &:hover {
+                      font-size: 1.4rem;
+                    }
+                }
+            }
+        }
+  }
+  .title {
+    margin-bottom: 20px;
+  }
+
+  nav {
+    background-color: $nav-color;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 1.2em;
+    font-weight: 600;
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: space-around;
+
+      li {
+        a {
+          text-decoration: none;
+          color: $font-color;
+          padding: 10px 20px;
+          display: block;
+
+          &:hover {
+            background-color: darken($nav-color, 10%);
+          }
         }
       }
     }
   }
 }
 
-nav {
-  background-color: $nav-color;
-  ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+.mainpage {
+  width: 80%;
+  margin: auto;
+}
+  
+  h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-align: center;
+    color: $primary-color;
+  }
+  
+  .quizlist {
     display: flex;
-    justify-content: space-around;
-    li {
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .card {
+      background-color: $card-color;
+      border-radius: 10px; 
+      width: 20%;
+      padding: 20px;
+      margin-bottom: 40px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      min-height: 200px;
+      min-width: 200px;
+      
+      &:hover{
+        scale: 1.1;
+      }
+      
       a {
         text-decoration: none;
-        color: $font-color;
-        padding: 10px 20px;
-        display: block;
-        &:hover {
-          background-color: darken($nav-color, 10%);
-            }
+        color: inherit;
+
+        &:hover,
+        &:focus,
+        &:active,
+        &:visited {
+            text-decoration: none;
+            color: inherit;
         }
-      }
     }
-  }
 
+      .card__content {
+        .card__info {
+          .card__title {
+            font-weight: bold;
+            color: $primary-color;
+            margin-bottom: 10px;
+          }
 
-  .mainpage {
-    width: 80%;
-    margin: auto;
-  }
-  
-    h2 {
-      font-size: 2em;
-      margin-bottom: 20px;
-      text-align: center;
-      color: $primary-color;
-    }
-  
-    .quizlist {
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-  
-      .card {
-        background-color: $card-color;
-        border-radius: 10px;
-        width: 20%;
-        padding: 20px;
-        margin-bottom: 40px;
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-        text-align: center;
-        min-height: 200px;
-  
-        .card__content {
-          .card__info {
-            .card__title {
-              font-weight: bold;
-              color: $primary-color;
-              margin-bottom: 10px;
-            }
-  
-            .card__description {
-              font-size: 0.9em;
-            }
-  
-            .card__category,
-            .card__attempts,
-            .card__difficulty
-             {
-              font-size: 0.9em;
-              margin-bottom: 5px;
-              color: lighten($font-color, 20%);
-            }
+          .card__description {
+            font-size: 0.9em;
+          }
+
+          .card__category,
+          .card__attempts,
+          .card__difficulty
+           {
+            font-size: 0.9em;
+            margin-bottom: 5px;
+            color: lighten($font-color, 20%);
           }
         }
-        .card__image {
-          height: 100px;
-          margin-bottom: 10px;
-        }
+      }
+      .card__image {
+        height: 100px;
+        margin-bottom: 10px;
       }
     }
-    .searchQuiz {
-      display: flex;
-      justify-content: flex-start;
-      margin-bottom: 20px;
-      gap: 5%;
+  }
+  .searchQuiz {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+    gap: 5%;
 
-
-      input[type="text"], select, button {
-        padding: 10px;
-        border: 1px solid lighten($font-color, 50%);
-        border-radius: 5px;
-      }
-
-      .searchQuiz__keyword {
-        margin: 0;
-      }
-      .searchQuiz__show {
-        display: flex;
-        align-items: center;
-        input {
-          margin-left: 10px;
-        }
+  input[type="text"], select {
+    padding: 10px;
+      border: 1px solid lighten($font-color, 50%);
+      border-radius: 5px;
+    }
+  .searchQuiz__keyword {
+      margin: 0;
+    }
+  .searchQuiz__show {
+    display: flex;
+      align-items: center;
+      input {
+        margin-left: 10px;
       }
     }
+  }
+
+
+.aboutpage {
+  width: 80%;
+  margin: 80px auto;
+
+  h1 {
+    color: $primary-color;
+  }
+}

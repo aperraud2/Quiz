@@ -17,7 +17,7 @@ const FeatureQuiz = () => {
 
     const randomizedQuiz = (quizzes, count) => {
         if (quizzes.length < count) {
-            return quizzes; // Return all quizzes if there are less than 'count'
+            return quizzes;
         }
         const quizzesCopy = [...quizzes];
 
