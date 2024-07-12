@@ -34,14 +34,6 @@ const QuizSearch = ({ onSearch }) => {
         fetchDifficulties();
     }, []);
 
-    // useEffect(() => {
-    //     if (typeof onSearch === 'function') {
-    //         onSearch( keywords, category, difficulty, hideDone );
-    //         console.log("keywords", keywords, "category", category, "difficulty", difficulty, "hideDone", hideDone)
-    //     }
-    // }, [keywords, category, difficulty, hideDone, onSearch]);
-
-
     const handleKeywordsChange = (e) => {
       setKeywords(e.target.value);
       onSearch(e.target.value, category, difficulty, hideDone);
@@ -68,7 +60,7 @@ const QuizSearch = ({ onSearch }) => {
             <div className="searchQuiz__keyword">
                 <input
                     type="text"
-                    placeholder="Search for keywords..."
+                    placeholder="Search a quiz..."
                     value={keywords}
                     onChange={handleKeywordsChange}
                 />

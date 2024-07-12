@@ -121,6 +121,7 @@ h2 {
     margin-bottom: 20px;
     text-align: center;
     color: $primary-color;
+    margin: 2%;
 }
 
 .quizlist {
@@ -238,7 +239,7 @@ h2 {
     .profile__bestscores {
         table {
             width: 80%;
-            margin-left: 40px;
+            margin: auto;
             border-collapse: collapse;
         }
         th,
