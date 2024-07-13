@@ -25,7 +25,7 @@ const Header = () => {
             <header>
                 <div className="header__title">
                     <div className="header__profile">
-                        <div className="header__avatar"></div>
+                        <div className="header__avatar"><img src="../../../images/blank-profile-picture.png" alt="useravatar"/></div>
                         <div className="header__connectionlinks">
                             <a className="header__connect" href="#" onClick={handleConnectClick}>Connect</a>
                             <a href="#" onClick={handleCreateAccountClick}>Create Account</a>
