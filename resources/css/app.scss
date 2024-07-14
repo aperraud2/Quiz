@@ -1,9 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
 $primary-color: #4caf50;
-$secondary-color: #f4f4f4; // page background
+$secondary-color: #f4f4f4;
 $font-color: #444;
 $card-color: #fff;
+$border-color: #707070;
 $body-font: "Roboto", sans-serif;
 $nav-color: #e2de84;
 
@@ -44,7 +45,7 @@ header {
                 border: 2px solid #000000;
                 background-size: cover;
                 overflow: hidden;
-                img{
+                img {
                     width: 60px;
                     height: 60px;
                 }
@@ -308,21 +309,17 @@ h2 {
         margin-top: 5%;
 
         .play__btn_inactive {
-            background-color: $secondary-color;
+            background-color: $card-color;
             color: $primary-color;
             border-radius: 25px;
             font-size: 2em;
             padding: 10px;
             border: $primary-color solid 2px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
             cursor: pointer;
+            box-shadow: 0 0 5px rgba($primary-color, 0.5);
 
             &:hover {
-                background-color: darken($secondary-color, 5%);
-            }
-
-            &:active {
-                background-color: darken($secondary-color, 10%);
+                background-color: darken($card-color, 8%);
             }
         }
 
@@ -331,7 +328,6 @@ h2 {
         }
     }
 }
-
 
 .popup {
     position: fixed;
@@ -353,7 +349,6 @@ h2 {
         text-align: center;
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         width: 20%;
-
 
         h2 {
             margin-bottom: 20px;
@@ -382,7 +377,7 @@ h2 {
     }
 
     &__fields {
-        display:flex;
+        display: flex;
         flex-direction: column;
         align-items: center;
         width: 60%;
@@ -398,7 +393,7 @@ h2 {
             width: 100%;
             padding: 10px;
             margin-bottom: 15px;
-            border: 1px solid #707070;
+            border: 1px solid $border-color;
             border-radius: 5px;
             font-size: 1rem;
         }
@@ -430,5 +425,147 @@ h2 {
     }
 }
 
+.question {
+    &__container {
+        width: 80%;
+        margin: 8% auto;
+        text-align: center;
+    }
+    &__quiz {
+        color: $primary-color;
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin: 40px 0;
+    }
+
+    &__input {
+        width: 40%;
+        padding: 5px;
+        border: 1px solid $border-color;
+        border-radius: 5px;
+        font-size: 1rem;
+
+        &:hover {
+            box-shadow: 0 0 5px rgba($primary-color, 0.5);
+        }
+
+        &:focus {
+            outline: none;
+            border: $primary-color solid 2px;
+            box-shadow: 0 0 5px rgba($primary-color, 0.5);
+        }
+
+        &:not([value=""]):not(:focus) {
+            border: $primary-color solid 2px;
+            box-shadow: 0 0 5px rgba($primary-color, 0.5);
+        }
+    }
+}
+
+.answer {
+    &__container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__button {
+        display: flex;
+        gap: 10px;
+        background-color: $card-color;
+        padding: 5px;
+        border: $border-color solid 1px;
+        border-radius: 5px;
+        font-size: 1rem;
+        cursor: pointer;
+        width: 20%;
+
+        &:hover {
+            background-color: darken($card-color, 8%);
+            box-shadow: 0 0 5px rgba($primary-color, 0.5);
+        }
+
+        &:focus {
+            border: $primary-color solid 2px;
+            // background-color: darken($card-color, 8%);
+            box-shadow: 0 0 5px rgba($primary-color, 0.5);
+        }
+    }
+
+    &__letter {
+        font-weight: bold;
+        color: $primary-color;
+    }
+}
 
 
+.finish{
+    &__container {
+        text-align: center;
+    }
+    &__button {
+        background-color: $card-color;
+        color: $primary-color;
+        border-radius: 10px;
+        font-size: 1.2em;
+        padding: 8px;
+        border: $primary-color solid 2px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+
+
+        &:hover {
+            background-color: darken($card-color, 8%);
+        }
+    }
+
+}
+
+
+.finish {
+    &__popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__content {
+        background: $card-color;
+        padding: 25px;
+        border-radius: 10px;
+        text-align: center;
+
+        p {
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+            color: $primary-color;
+        }
+
+        button {
+            background-color: $primary-color;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            margin: 0 10px;
+
+            &:hover {
+                background-color: darken($primary-color, 10%);
+            }
+
+            &:focus {
+                outline: none;
+                box-shadow: 0 0 0 3px lighten($primary-color, 20%);
+            }
+
+        }
+    }
+
+}
+}

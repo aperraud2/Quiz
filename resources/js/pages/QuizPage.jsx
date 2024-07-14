@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
-import Question from '../components/Question'
+import Question from "../components/Question";
 import axios from "axios";
 
 const QuizPage = () => {
@@ -83,7 +83,7 @@ const QuizPage = () => {
                             Start Quiz
                         </button>
                     </div>
-                    
+
                     {quizStarted && <Question quizId={quiz.id} />}
                 </div>
             ) : (
