@@ -28,7 +28,9 @@ const Header = () => {
                         <div className="header__avatar"><img src="../../../images/blank-profile-picture.png" alt="useravatar"/></div>
                         <div className="header__connectionlinks">
                             <a className="header__connect" href="#" onClick={handleConnectClick}>Connect</a>
+                            {/* <Link className="header__connect" to="/login" onClick={handleConnectClick}>Connect</Link> */}
                             <a href="#" onClick={handleCreateAccountClick}>Create Account</a>
+                            {/* <Link to="/register" onClick={handleCreateAccountClick}>Create Account</Link> */}
                         </div>
                     </div>
                     Squiz Game
