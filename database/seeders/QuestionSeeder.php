@@ -25,7 +25,7 @@ class QuestionSeeder extends Seeder
             'quiz_id' => 1
             ],
             [
-            'question' => 'How many rules are there in the "Fight Club" from the eoponymous movie?',
+            'question' => 'How many rules are there in the "Fight Club" from the eponymous movie?',
             'type' =>1 ,
             'quiz_id' => 1,
             ]

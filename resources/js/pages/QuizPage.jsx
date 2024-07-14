@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
+import Question from '../components/Question'
 import axios from "axios";
 
 const QuizPage = () => {
     const [randomQuiz, setRandomQuiz] = useState(null);
+    const [quizStarted, setQuizStarted] = useState(false);
     const location = useLocation();
     const quiz = location.state?.quiz ?? randomQuiz;
 
@@ -36,6 +38,7 @@ const QuizPage = () => {
 
     const handleButtonClick = () => {
         const myButton = document.getElementById("play_btn");
+        setQuizStarted(true);
         if (myButton) {
             myButton.className = "play__btn_active";
         }
@@ -80,6 +83,8 @@ const QuizPage = () => {
                             Start Quiz
                         </button>
                     </div>
+                    
+                    {quizStarted && <Question quizId={quiz.id} />}
                 </div>
             ) : (
                 <p>loading</p>
