@@ -57,36 +57,36 @@ export default function Register(props) {
     return (
         <form action="/register" method="post" onSubmit={handleSubmit}>
             <div className="popup__fields">
-            <label>Username</label>
-            <input
-                type="text"
-                name="name"
-                value={values.name}
-                onChange={handleChange}
-            />
-            <label>Email</label>
-            <input
-                type="email"
-                name="email"
-                value={values.email}
-                onChange={handleChange}
-            />
-            <label>Password</label>
-            <input
-                type="password"
-                name="password"
-                value={values.password}
-                onChange={handleChange}
-            />
-            <label>Password confirmation</label>
-            <input
-                type="password"
-                name="password_confirmation"
-                value={values.password_confirmation}
-                onChange={handleChange}
-            />
+                <label>Username</label>
+                <input
+                    type="text"
+                    name="name"
+                    value={values.name}
+                    onChange={handleChange}
+                />
+                <label>Email</label>
+                <input
+                    type="email"
+                    name="email"
+                    value={values.email}
+                    onChange={handleChange}
+                />
+                <label>Password</label>
+                <input
+                    type="password"
+                    name="password"
+                    value={values.password}
+                    onChange={handleChange}
+                />
+                <label>Password confirmation</label>
+                <input
+                    type="password"
+                    name="password_confirmation"
+                    value={values.password_confirmation}
+                    onChange={handleChange}
+                />
 
-            <button>Register</button>
+                <button>Register</button>
             </div>
         </form>
     );

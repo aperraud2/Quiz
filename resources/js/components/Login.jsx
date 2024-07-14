@@ -55,24 +55,24 @@ export default function Login(props) {
 
     return (
         <form action="/login" method="post" onSubmit={handleSubmit}>
-                        <div className="popup__fields">
-            <label>Username</label>
-            <input
-                type="text"
-                name="name"
-                value={values.name}
-                onChange={handleChange}
-            />
+            <div className="popup__fields">
+                <label>Username</label>
+                <input
+                    type="text"
+                    name="name"
+                    value={values.name}
+                    onChange={handleChange}
+                />
 
-            <label>Password</label>
-            <input
-                type="password"
-                name="password"
-                value={values.password}
-                onChange={handleChange}
-            />
+                <label>Password</label>
+                <input
+                    type="password"
+                    name="password"
+                    value={values.password}
+                    onChange={handleChange}
+                />
 
-            <button>Login</button>
+                <button>Login</button>
             </div>
         </form>
     );

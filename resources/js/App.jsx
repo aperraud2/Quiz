@@ -5,7 +5,6 @@ import Homepage from './pages/Homepage'
 import QuizPage from './pages/QuizPage';
 import Profile from './pages/Profile';
 import About from './pages/About';
-
 import Header from './components/Header'
 
 
