@@ -1,8 +1,9 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 
 const Answer = ({ questionId }) => {
     const [answers, setAnswers] = useState([]);
+    const [selectedAnswer, setSelectedAnswer] = useState(null);
     const propositionLetters = ["A", "B", "C", "D"];
 
     const fetchAnswers = async () => {
@@ -22,23 +23,23 @@ const Answer = ({ questionId }) => {
         fetchAnswers();
     }, [questionId]);
 
+    const selectAnswer = (answerId) => {
+        setSelectedAnswer((prevSelected) => (prevSelected === answerId ? null : answerId));
+    };
+
     return (
         <div>
             <div className="answer__container">
-                <form>
                 {answers.map((answer) => (
-                    <label key={answer.id} className="answer__label">
-                        <input
-                            type="radio"
-                            name="answers"
-                            value={answer.id}
-                            className="answer__radio"
-                        />
+                    <button
+                        className={`answer__button ${selectedAnswer === answer.id ? 'selected' : ''}`}
+                        key={answer.id}
+                        onClick={() => selectAnswer(answer.id)}
+                    >
                         <div className="answer__letter">{answer.letter}. </div>
-                        <div className="answer__text">{answer.name}</div>
-                    </label>
+                        <div className="answer__text"> {answer.name}</div>
+                    </button>
                 ))}
-                </form>
             </div>
         </div>
     );

@@ -470,7 +470,7 @@ h2 {
         gap: 20px;
     }
 
-    &__radio {
+    &__button {
         display: flex;
         gap: 10px;
         background-color: $card-color;
@@ -487,7 +487,7 @@ h2 {
             box-shadow: 0 0 5px rgba($primary-color, 0.5);
         }
 
-        &:focus {
+        &.selected {
             border: $primary-color solid 2px;
             // background-color: darken($card-color, 8%);
             box-shadow: 0 0 5px rgba($primary-color, 0.5);

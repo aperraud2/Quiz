@@ -1,17 +1,34 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 
 
-const Profile = () => (
+const Profile = () => {
+    const [userName, setUserName] = useState('');
 
+    const fetchUserName = async () => {
+        try {
+            const response = await axios.get('/api/user');
+            setUserName(response.data.name);
+        } catch (error) {
+            console.error('Error fetching user name:', error);
+        }
+    };
+
+    useEffect(() => {
+        fetchUserName();
+    }, []);
+
+
+return (
 <div>
     <div className = "profilepage">
-        <h1>Hello user!</h1>
+        <h1>Hello {userName}!</h1>
         <div className="profile__generalstats">
             <h2>General statistics</h2>
             <ul>
                 <li>Total number of quiz finished:</li>
                 <li>Number of different quiz finished:</li>
-                <li>Total time spent doing quiz:</li>
+                {/* <li>Total time spent doing quiz:</li> */}
             </ul>
         </div>
         <div className="profile__bestscores">
@@ -60,7 +77,10 @@ const Profile = () => (
         </div>
     </div>
 </div>
-)
+
+);
+
+};
 
 
 export default Profile;
