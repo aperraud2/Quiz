@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->time('total_time_spent');
+            $table->time('total_time_spent')->nullable();
         });
     }
 

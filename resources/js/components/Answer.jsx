@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import axios from "axios";
 
 const Answer = ({ questionId }) => {
@@ -25,12 +25,20 @@ const Answer = ({ questionId }) => {
     return (
         <div>
             <div className="answer__container">
+                <form>
                 {answers.map((answer) => (
-                    <button className="answer__button" key={answer.id}>
+                    <label key={answer.id} className="answer__label">
+                        <input
+                            type="radio"
+                            name="answers"
+                            value={answer.id}
+                            className="answer__radio"
+                        />
                         <div className="answer__letter">{answer.letter}. </div>
-                        <div className="answer__text"> {answer.name}</div>
-                    </button>
+                        <div className="answer__text">{answer.name}</div>
+                    </label>
                 ))}
+                </form>
             </div>
         </div>
     );

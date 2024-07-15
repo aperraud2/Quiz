@@ -1,45 +1,41 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
+import UserContext from "./UserContext";
+import axios from "axios";
 
-export default function Login(props) {
+export default function Login({ onSuccess, onError }) {
+    const { getUser } = useContext(UserContext);
+
     const [values, setValues] = useState({
-        email: "",
-
+        name: "",
         password: "",
     });
 
     const handleSubmit = async (event) => {
         event.preventDefault();
 
-        const response = await fetch("/login", {
-            method: "POST",
+        try {
+            const response = await axios.post("/login", values);
 
-            body: JSON.stringify(values),
+            const response_data = response.data;
 
-            headers: {
-                Accept: "application/json",
-
-                "Content-type": "application/json",
-
-                "X-CSRF-TOKEN": document
-                    .querySelector('meta[name="csrf-token"]')
-                    .getAttribute("content"),
-            },
-        });
-
-        const response_data = await response.json();
-
-        if (Math.floor(response.status / 100) !== 2) {
-            switch (response.status) {
-                case 422:
-                    console.log("VALIDATION FAILED:", response_data.errors);
-
-                    break;
-
-                default:
-                    console.log("UNKNOWN ERROR", response_data);
-
-                    break;
+            getUser();
+            onSuccess("Login successful!"); 
+        } catch (error) {
+            let message = "An error occurred.";
+            if (error.response) {
+                switch (error.response.status) {
+                    case 422:
+                        message = "Validation failed: " + JSON.stringify(error.response.data.errors.name);
+                        break;
+                    case 500:
+                        message = "Unknown error: " + error.response.data;
+                        break;
+                    default:
+                        message = error.response.data;
+                        break;
+                }
             }
+            onError(message); 
         }
     };
 
@@ -47,7 +43,6 @@ export default function Login(props) {
         setValues((previous_values) => {
             return {
                 ...previous_values,
-
                 [event.target.name]: event.target.value,
             };
         });

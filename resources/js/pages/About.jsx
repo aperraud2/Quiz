@@ -12,7 +12,7 @@ const About = () => (
             The goal is to have a fully functional full-stack website, as well as to provide people with a platform where they can have fun while learning.
             <br/>
             <br/>
-            All the quizzes have been prepared by myself.
+            All the quiz have been prepared by myself.
             <br/>
             <br/>
             Thank you for your visit and I hope you have a pleasant time here.

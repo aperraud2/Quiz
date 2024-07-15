@@ -57,10 +57,11 @@ header {
                 gap: 5px;
                 margin-left: 10px;
 
-                a {
+                span {
                     color: white;
                     font-size: 1.1rem;
                     text-decoration: none;
+                    cursor: pointer;
 
                     &:hover {
                         font-size: 1.2rem;
@@ -465,10 +466,11 @@ h2 {
 .answer {
     &__container {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
+        gap: 20px;
     }
 
-    &__button {
+    &__radio {
         display: flex;
         gap: 10px;
         background-color: $card-color;
@@ -478,6 +480,7 @@ h2 {
         font-size: 1rem;
         cursor: pointer;
         width: 20%;
+        
 
         &:hover {
             background-color: darken($card-color, 8%);
@@ -516,9 +519,6 @@ h2 {
             background-color: darken($card-color, 8%);
         }
     }
-}
-
-.finish {
     &__popup {
         position: fixed;
         top: 0;

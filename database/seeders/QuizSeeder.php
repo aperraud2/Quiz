@@ -22,22 +22,22 @@ class QuizSeeder extends Seeder
             [
             'name' => 'Movies Quiz',
             'description' => 'Quiz about movies',
-            'difficulty' => 2      
+            'difficulty_id' => 2      
             ],            
             [
             'name' => "Geography - True or False",
             'description' => 'Quiz about geography',
-            'difficulty' => 3      
+            'difficulty_id' => 3      
             ],
             [
             'name' => 'History Quiz',
             'description' => 'Quiz about history',
-            'difficulty' => 2      
+            'difficulty_id' => 2      
             ],            
             [
             'name' => '1981',
             'description' => 'Year 1981',
-            'difficulty' => 4      
+            'difficulty_id' => 4
             ]
             ];
 
