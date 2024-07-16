@@ -13,7 +13,7 @@ const QuizCard = ({ quiz }) => {
                         <div className="card__description">{quiz.description}</div>
                         <div className="card__category">
                         {quiz.category_quiz.map((cq, index) => (
-                            <span key={index}>{cq.category?.name}</span>
+                            <span key={index}>{cq.category?.name} </span>
                         ))}
                     </div>
                         <div className="card__difficulty">{quiz.difficulty?.name}</div>

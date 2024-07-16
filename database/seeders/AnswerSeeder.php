@@ -312,7 +312,67 @@ class AnswerSeeder extends Seeder
             'name' => 'Coal Miner\'s Daughter',
             'correct' => 0,
             'question_id' => 22
-            ]            
+            ],   
+            [
+            'name' => 'Karlovy Vary –> Karlovy & Vary',
+            'correct' => 0,
+            'question_id' => 23
+            ],   
+            [
+            'name' => 'Frýdek-Místek –> Frýdek & Místek',
+            'correct' => 1,
+            'question_id' => 23
+            ],  
+            [
+            'name' => 'Jihlava –> Staré Hory & Helenín',
+            'correct' => 0,
+            'question_id' => 23
+            ],  
+            [
+            'name' => 'Velké Meziříčí –> Meziříčí & Karlov',
+            'correct' => 0,
+            'question_id' => 23
+            ],
+            [
+            'name' => 'Jeseník',
+            'correct' => 1,
+            'question_id' => 24
+            ],
+            [
+            'name' => 'Frýdek-Místek',
+            'correct' => 0,
+            'question_id' => 24
+            ],
+            [
+            'name' => 'Františkovy Lázně',
+            'correct' => 0,
+            'question_id' => 24
+            ],
+            [
+            'name' => 'Klatovy',
+            'correct' => 0,
+            'question_id' => 24
+            ],
+            [
+            'name' => 'Trnava (okres Zlín)',
+            'correct' => 0,
+            'question_id' => 25
+            ],
+            [
+            'name' => 'Košice (okres Kutná Hora)',
+            'correct' => 0,
+            'question_id' => 25
+            ],
+            [
+            'name' => 'Žilina (okres Kladno)',
+            'correct' => 0,
+            'question_id' => 25
+            ],
+            [
+            'name' => 'Nitra (okres Jablonec nad Nisou)',
+            'correct' => 1,
+            'question_id' => 25
+            ]         
         ];
         
 

@@ -21,13 +21,13 @@ const QuizPage = () => {
                 setError("No quizzes found.");
                 setTimeout(() => {
                     window.location.reload();
-                }, 1000);
+                }, 100);
             }
         } catch (err) {
             setError("Error fetching quizzes.");
             setTimeout(() => {
                 window.location.reload();
-            }, 1000); 
+            }, 100); 
         }
     };
 
@@ -67,8 +67,8 @@ const QuizPage = () => {
                             <div className="quiz__metadata">
                                 <div className="quiz__category">
                                     {quiz.category_quiz?.map((cq, index) => (
-                                        <span key={index}>
-                                            {cq.category?.name}
+                                        <span key={index} >
+                                            {cq.category?.name  }  
                                         </span>
                                     ))}
                                 </div>

@@ -42,6 +42,12 @@ class QuizSeeder extends Seeder
             'description' => 'How well do you know the events that took place in 1981?',
             'difficulty_id' => 4,
             'image' => "/images/1981quiz.JPG"
+            ],
+            [
+            'name' => 'Česko',
+            'description' => 'How well do you the Czech Republic?',
+            'difficulty_id' => 4,
+            'image' => "/images/quizczechia.JPG"
             ]
             ];
 

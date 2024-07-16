@@ -22,7 +22,7 @@ const Answer = ({ questionId, onSelectAnswer }) => {
             setLoading(false);
             setTimeout(() => {
                 window.location.reload();
-            }, 1000);
+            }, 100);
         }
     };
 

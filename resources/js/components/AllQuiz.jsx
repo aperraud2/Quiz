@@ -32,7 +32,6 @@ const AllQuiz = () => {
         }
         if (searchCriteria.category) {
             result = result.filter(quiz => quiz.category_quiz[0].category?.name === searchCriteria.category );
-            console.log(searchCriteria.category);
         }
         if (searchCriteria.difficulty) {
             result = result.filter(quiz => quiz.difficulty?.name === searchCriteria.difficulty);

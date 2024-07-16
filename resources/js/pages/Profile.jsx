@@ -4,6 +4,7 @@ import axios from 'axios';
 
 const Profile = () => {
     const [userName, setUserName] = useState('');
+    const [quizStats, setQuizStats] = useState([]);
 
     const fetchUserName = async () => {
         try {
@@ -14,8 +15,18 @@ const Profile = () => {
         }
     };
 
+    const fetchQuizStats = async () => {
+        try {
+            const response = await axios.get('/api/quizzes');
+            setQuizStats(response.data);
+        } catch (error) {
+            console.error('Error fetching quiz stats:', error);
+        }
+    };
+
     useEffect(() => {
         fetchUserName();
+        fetchQuizStats();
     }, []);
 
 
@@ -44,34 +55,15 @@ return (
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>Quiz 1</td>
-                <td>95</td>
-                <td>80</td>
-                <td>3</td>
-                <td>10</td>
-            </tr>
-            <tr>
-                <td>Quiz 2</td>
-                <td>88</td>
-                <td>75</td>
-                <td>2</td>
-                <td>8</td>
-            </tr>
-            <tr>
-                <td>Quiz 3</td>
-                <td>90</td>
-                <td>85</td>
-                <td>4</td>
-                <td>12</td>
-            </tr>
-            <tr>
-                <td>Quiz 4</td>
-                <td>92</td>
-                <td>78</td>
-                <td>5</td>
-                <td>15</td>
-            </tr>
+            {quizStats.map((quiz) => (
+                <tr key={quiz.id}>
+                    <td>{quiz.name}</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                </tr>
+            ))}
         </tbody>
     </table>
         </div>

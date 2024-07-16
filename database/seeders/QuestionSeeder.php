@@ -132,7 +132,22 @@ class QuestionSeeder extends Seeder
             'question' => 'Which film won the Oscar for Best Picture that year?',
             'type' =>1 ,
             'quiz_id' => 4,
+            ],            
+            [
+            'question' => 'Which Czech city was created by the German occupying forces on January 1, 1943, by merging two pre-existing towns?',
+            'type' =>1 ,
+            'quiz_id' => 5,
             ],
+            [
+            'question' => 'Which of these cities was called Frývaldov until 1948?',
+            'type' =>1 ,
+            'quiz_id' => 5,
+            ],
+            [
+            'question' => 'Which of these Czech cities does not exist?',
+            'type' =>1 ,
+            'quiz_id' => 5,
+            ]
             ];
 
             foreach ($questions as $question) {

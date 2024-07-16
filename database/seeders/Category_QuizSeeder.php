@@ -32,8 +32,11 @@ class Category_QuizSeeder extends Seeder
         [
         'quiz_id' => 4,
         'category_id' => 2
+        ],
+        [
+        'quiz_id' => 5,
+        'category_id' => 2
         ]
-
         ];
 
         foreach ($categories_quiz as $category_quiz) {
