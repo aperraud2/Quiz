@@ -9,45 +9,47 @@ $body-font: "Roboto", sans-serif;
 $nav-color: #e2de84;
 
 body {
-    font-family: $body-font;
     background-color: $secondary-color;
+    color: $font-color;
+    font-family: $body-font;
     margin: 0;
     padding: 0;
-    color: $font-color;
 }
 
 header {
     margin-bottom: 3%;
+    
     .header__title {
+        align-items: center;
         background-color: $primary-color;
         color: #fff;
-        padding: 20px;
         display: flex;
         flex-direction: column;
-        align-items: center;
         font-size: 3em;
-        position: relative;
         min-height: 60px;
+        padding: 20px;
+        position: relative;
 
         .header__profile {
-            height: 100%;
-            position: absolute;
-            left: 0;
-            top: 0px;
-            display: flex;
             align-items: center;
+            display: flex;
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0px;
 
             .header__avatar {
-                margin-left: 1em;
-                width: 60px;
-                height: 60px;
-                border-radius: 50%;
-                border: 2px solid #000000;
                 background-size: cover;
+                border: 2px solid #000000;
+                border-radius: 50%;
+                height: 60px;
+                margin-left: 1em;
                 overflow: hidden;
+                width: 60px;
+
                 img {
-                    width: 60px;
                     height: 60px;
+                    width: 60px;
                 }
             }
 
@@ -59,9 +61,9 @@ header {
 
                 span {
                     color: white;
+                    cursor: pointer;
                     font-size: 1.1rem;
                     text-decoration: none;
-                    cursor: pointer;
 
                     &:hover {
                         font-size: 1.2rem;
@@ -82,6 +84,7 @@ header {
             }
         }
     }
+
     .title {
         margin-bottom: 20px;
     }
@@ -89,24 +92,24 @@ header {
     nav {
         background-color: $nav-color;
         border-radius: 5px;
-        width: 100%;
+        color: $font-color;
         font-size: 1.2em;
         font-weight: 600;
-        color: $font-color;
+        width: 100%;
 
         ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
             display: flex;
             justify-content: space-around;
+            list-style: none;
+            margin: 0;
+            padding: 0;
 
             li {
                 a {
-                    text-decoration: none;
                     color: $font-color;
-                    padding: 10px 20px;
                     display: block;
+                    padding: 10px 20px;
+                    text-decoration: none;
 
                     &:hover {
                         background-color: darken($nav-color, 10%);
@@ -118,48 +121,48 @@ header {
 }
 
 .mainpage {
-    width: 80%;
     margin: auto;
+    width: 80%;
 }
 
 h2 {
+    color: $primary-color;
     font-size: 2em;
+    margin: 2%;
     margin-bottom: 20px;
     text-align: center;
-    color: $primary-color;
-    margin: 2%;
 }
 
 .quizlist {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
+    justify-content: space-between;
 
     .card {
         background-color: $card-color;
         border-radius: 10px;
-        width: 20%;
-        padding: 20px;
-        margin-bottom: 40px;
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-        text-align: center;
+        margin-bottom: 40px;
         min-height: 200px;
         min-width: 200px;
+        padding: 20px;
+        text-align: center;
+        width: 20%;
 
         &:hover {
             scale: 1.1;
         }
 
         a {
-            text-decoration: none;
             color: inherit;
+            text-decoration: none;
 
-            &:hover,
-            &:focus,
             &:active,
+            &:focus,
+            &:hover,
             &:visited {
-                text-decoration: none;
                 color: inherit;
+                text-decoration: none;
             }
         }
 
@@ -169,8 +172,8 @@ h2 {
                 flex-direction: column;
 
                 .card__title {
-                    font-weight: bold;
                     color: $primary-color;
+                    font-weight: bold;
                     margin-bottom: 10px;
                 }
 
@@ -179,42 +182,47 @@ h2 {
                     margin-bottom: 20px;
                 }
 
-                .card__category,
                 .card__attempts,
+                .card__category,
                 .card__difficulty {
+                    color: lighten($font-color, 20%);
                     font-size: 0.9em;
                     margin-bottom: 5px;
-                    color: lighten($font-color, 20%);
                 }
             }
         }
+
         .card__image {
             height: 100%;
+            margin-bottom: 10px;
             max-height: 160px;
             object-fit: contain;
             width: 100%;
-            margin-bottom: 10px;
         }
     }
 }
+
 .searchQuiz {
     display: flex;
+    gap: 5%;
     justify-content: flex-start;
     margin-bottom: 20px;
-    gap: 5%;
 
     input[type="text"],
     select {
-        padding: 10px;
         border: 1px solid lighten($font-color, 50%);
         border-radius: 5px;
+        padding: 10px;
     }
+
     .searchQuiz__keyword {
         margin: 0;
     }
+
     .searchQuiz__show {
-        display: flex;
         align-items: center;
+        display: flex;
+
         input {
             margin-left: 10px;
         }
@@ -222,8 +230,8 @@ h2 {
 }
 
 .aboutpage {
-    width: 80%;
     margin: 80px auto;
+    width: 80%;
 
     h1 {
         color: $primary-color;
@@ -232,33 +240,38 @@ h2 {
 
 .profilepage {
     margin: 0;
+
     h1 {
         text-align: center;
     }
+
     h2 {
         margin: 3%;
     }
+
     .profile__generalstats {
         ul {
-            width: 80%;
             display: flex;
-            list-style-type: none;
-            justify-content: space-evenly;
             font-size: 1.2em;
+            justify-content: space-evenly;
+            list-style-type: none;
+            width: 80%;
         }
     }
 
     .profile__bestscores {
         table {
-            width: 80%;
-            margin: auto;
             border-collapse: collapse;
+            margin: auto;
+            width: 80%;
         }
+
         th,
         td {
             border: 1px solid #ddd;
             padding: 8px;
         }
+
         th {
             background-color: $primary-color;
             text-align: left;
@@ -268,32 +281,34 @@ h2 {
 
 .quiz {
     &__page {
-        width: 80%;
         margin: auto;
+        width: 80%;
     }
+
     &__header {
         display: flex;
         justify-content: space-evenly;
     }
+
     &__data {
-        width: 360px;
-        padding: 5% 3%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        padding: 5% 3%;
+        width: 360px;
     }
 
     &__image {
-        width: 100%;
         height: 100%;
         max-height: 360px;
         object-fit: contain;
+        width: 100%;
     }
 
     &__title {
+        color: $primary-color;
         font-size: 2rem;
         font-weight: bold;
-        color: $primary-color;
     }
 
     &__metadata {
@@ -315,18 +330,18 @@ h2 {
     }
 
     &__play {
-        text-align: center;
         margin-top: 5%;
+        text-align: center;
 
         .play__btn_inactive {
             background-color: $card-color;
-            color: $primary-color;
+            border: $primary-color solid 2px;
             border-radius: 25px;
+            box-shadow: 0 0 5px rgba($primary-color, 0.5);
+            color: $primary-color;
+            cursor: pointer;
             font-size: 2em;
             padding: 10px;
-            border: $primary-color solid 2px;
-            cursor: pointer;
-            box-shadow: 0 0 5px rgba($primary-color, 0.5);
 
             &:hover {
                 background-color: darken($card-color, 8%);
@@ -340,24 +355,24 @@ h2 {
 }
 
 .popup {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    align-items: center;
     background-color: rgba(0, 0, 0, 0.5);
     display: flex;
+    height: 100%;
     justify-content: center;
-    align-items: center;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
     z-index: 1000;
 
     &__content {
-        position: relative;
         background: #fff;
-        padding: 20px;
         border-radius: 5px;
-        text-align: center;
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        position: relative;
+        text-align: center;
         width: 20%;
 
         h2 {
@@ -365,67 +380,67 @@ h2 {
         }
 
         .popup_close {
-            position: absolute;
-            top: 10px;
-            right: 10px;
             background: none;
             border: none;
+            color: #333;
+            cursor: pointer;
             font-size: 1.5rem;
             font-weight: bold;
-            cursor: pointer;
-            color: #333;
+            position: absolute;
+            right: 10px;
+            top: 10px;
             transition: color 0.3s;
-
-            &:hover {
-                color: $primary-color;
-            }
 
             &:focus {
                 outline: none;
+            }
+
+            &:hover {
+                color: $primary-color;
             }
         }
     }
 
     &__fields {
+        align-items: center;
         display: flex;
         flex-direction: column;
-        align-items: center;
-        width: 60%;
         margin: auto;
+        width: 60%;
 
         label {
             display: block;
-            margin-bottom: 5px;
             font-weight: bold;
+            margin-bottom: 5px;
         }
 
         input {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
             border: 1px solid $border-color;
             border-radius: 5px;
             font-size: 1rem;
+            margin-bottom: 15px;
+            padding: 10px;
+            width: 100%;
         }
 
         button {
             background-color: $primary-color;
-            color: #fff;
-            padding: 10px 20px;
             border: none;
             border-radius: 5px;
+            color: #fff;
+            cursor: pointer;
             font-size: 1rem;
             font-weight: bold;
-            cursor: pointer;
+            padding: 10px 20px;
             transition: background-color 0.3s;
+
+            &:focus {
+                box-shadow: 0 0 0 3px lighten($primary-color, 20%);
+                outline: none;
+            }
 
             &:hover {
                 background-color: darken($primary-color, 10%);
-            }
-
-            &:focus {
-                outline: none;
-                box-shadow: 0 0 0 3px lighten($primary-color, 20%);
             }
 
             &:active {
@@ -437,10 +452,11 @@ h2 {
 
 .question {
     &__container {
-        width: 80%;
         margin: 8% auto;
         text-align: center;
+        width: 80%;
     }
+
     &__quiz {
         color: $primary-color;
         font-size: 1.2rem;
@@ -449,19 +465,19 @@ h2 {
     }
 
     &__input {
-        width: 40%;
-        padding: 5px;
         border: 1px solid $border-color;
         border-radius: 5px;
         font-size: 1rem;
-
-        &:hover {
-            box-shadow: 0 0 5px rgba($primary-color, 0.5);
-        }
+        padding: 5px;
+        width: 40%;
 
         &:focus {
-            outline: none;
             border: $primary-color solid 2px;
+            box-shadow: 0 0 5px rgba($primary-color, 0.5);
+            outline: none;
+        }
+
+        &:hover {
             box-shadow: 0 0 5px rgba($primary-color, 0.5);
         }
 
@@ -480,14 +496,14 @@ h2 {
     }
 
     &__button {
-        display: flex;
-        gap: 10px;
         background-color: $card-color;
-        padding: 5px;
         border: $border-color solid 1px;
         border-radius: 5px;
-        font-size: 1rem;
         cursor: pointer;
+        display: flex;
+        font-size: 1rem;
+        gap: 10px;
+        padding: 5px;
         width: 20%;
 
         &:hover {
@@ -497,14 +513,13 @@ h2 {
 
         &.selected {
             border: $primary-color solid 2px;
-            // background-color: darken($card-color, 8%);
             box-shadow: 0 0 5px rgba($primary-color, 0.5);
         }
     }
 
     &__letter {
-        font-weight: bold;
         color: $primary-color;
+        font-weight: bold;
     }
 }
 
@@ -512,65 +527,67 @@ h2 {
     &__container {
         text-align: center;
     }
+
     &__button {
         background-color: $card-color;
-        color: $primary-color;
-        border-radius: 10px;
-        font-size: 1.2em;
-        padding: 8px;
         border: $primary-color solid 2px;
+        border-radius: 10px;
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        color: $primary-color;
         cursor: pointer;
+        font-size: 1.2em;
         margin-bottom: 10%;
+        padding: 8px;
 
         &:hover {
             background-color: darken($card-color, 8%);
         }
     }
+
     &__button_hide {
         display: none;
     }
 
     &__popup {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
+        align-items: center;
         background-color: rgba(0, 0, 0, 0.5);
         display: flex;
+        height: 100%;
         justify-content: center;
-        align-items: center;
+        left: 0;
+        position: fixed;
+        top: 0;
+        width: 100%;
 
         &__content {
             background: $card-color;
-            padding: 25px;
             border-radius: 10px;
+            padding: 25px;
             text-align: center;
 
             p {
-                margin-bottom: 20px;
-                font-size: 1.2rem;
                 color: $primary-color;
+                font-size: 1.2rem;
+                margin-bottom: 20px;
             }
 
             button {
                 background-color: $primary-color;
-                color: #fff;
-                padding: 10px 20px;
                 border: none;
                 border-radius: 5px;
-                font-size: 1rem;
+                color: #fff;
                 cursor: pointer;
+                font-size: 1rem;
                 margin: 0 10px;
+                padding: 10px 20px;
+
+                &:focus {
+                    box-shadow: 0 0 0 3px lighten($primary-color, 20%);
+                    outline: none;
+                }
 
                 &:hover {
                     background-color: darken($primary-color, 10%);
-                }
-
-                &:focus {
-                    outline: none;
-                    box-shadow: 0 0 0 3px lighten($primary-color, 20%);
                 }
             }
         }
