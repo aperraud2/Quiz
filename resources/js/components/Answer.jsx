@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-const Answer = ({ questionId }) => {
+const Answer = ({ questionId, onSelectAnswer }) => {
     const [answers, setAnswers] = useState([]);
     const [selectedAnswer, setSelectedAnswer] = useState(null);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
     const propositionLetters = ["A", "B", "C", "D"];
 
     const fetchAnswers = async () => {
@@ -14,8 +16,13 @@ const Answer = ({ questionId }) => {
                 letter: propositionLetters[index],
             }));
             setAnswers(fetchedAnswers);
+            setLoading(false);
         } catch (error) {
-            console.error("Error fetching answers:", error);
+            setError("Error fetching answers");
+            setLoading(false);
+            setTimeout(() => {
+                window.location.reload();
+            }, 1000);
         }
     };
 
@@ -23,8 +30,13 @@ const Answer = ({ questionId }) => {
         fetchAnswers();
     }, [questionId]);
 
+    if (loading) return <p>Loading answers...</p>;
+    if (error) return <p>{error}</p>;
+
     const selectAnswer = (answerId) => {
-        setSelectedAnswer((prevSelected) => (prevSelected === answerId ? null : answerId));
+        const newSelectedAnswer = selectedAnswer === answerId ? null : answerId;
+        setSelectedAnswer(newSelectedAnswer);
+        onSelectAnswer(questionId, newSelectedAnswer);
     };
 
     return (

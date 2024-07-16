@@ -93,7 +93,46 @@ class QuestionSeeder extends Seeder
             'question' => 'Chongqing, the most populous city proper in the world, would be in the top 20 most populated countries if it were one.',
             'type' =>1 ,
             'quiz_id' => 2,
-            ]
+            ],
+            [
+            'question' => 'In France, the first round of the presidential election took place on April 26, 1981. Among all the candidates, 3 have been or will one day be elected French president.
+            Among these four Presidents of the French Republic, which one was not a candidate in 1981?',
+            'type' =>1 ,
+            'quiz_id' => 4,
+            ],
+            [
+            'question' => 'Who became the 40th President of the United States of America in 1981?',
+            'type' =>1 ,
+            'quiz_id' => 4,
+            ],
+            [
+            'question' => 'Belize and Antigua and Barbuda gained independence on September 21 and November 1, respectively.
+            But from which country?',
+            'type' =>1 ,
+            'quiz_id' => 4,
+            ],
+            [
+            'question' => 'Which of these celebrities born in 1981 is not from the US?',
+            'type' =>1 ,
+            'quiz_id' => 4,
+            ],
+            [
+            'question' => 'On February 23, there was an attempted military coup in Spain led by Colonel Antonio Tejero, who, along with his coup plotters, stormed the Spanish parliament and took the deputies hostage, all filmed by Spanish television.
+            The King of Spain, as head of the armed forces, personally intervenes by calling the garrison captains not to take part in the coup and plays a major role in the failure of the putsch.
+            But who is the King of Spain?',
+            'type' =>1 ,
+            'quiz_id' => 4,
+            ],
+            [
+            'question' => 'Which road safety device was marketed for the first time in Europe in 1981?',
+            'type' =>1 ,
+            'quiz_id' => 4,
+            ],
+            [
+            'question' => 'Which film won the Oscar for Best Picture that year?',
+            'type' =>1 ,
+            'quiz_id' => 4,
+            ],
             ];
 
             foreach ($questions as $question) {

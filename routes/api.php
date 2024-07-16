@@ -13,3 +13,4 @@ Route::get('/categories', [App\Http\Controllers\Api\CategoryController::class, '
 Route::get('/users', [App\Http\Controllers\Api\UserController::class, 'index']);
 Route::get('/answers/{questionId}', [App\Http\Controllers\Api\AnswerController::class, 'index']);
 Route::get('/questions/{quizId}', [App\Http\Controllers\Api\QuestionController::class, 'index']);
+Route::get('/quiz/{quizId}', [App\Http\Controllers\Api\QuizController::class, 'fetchQuizWithAnswers']);

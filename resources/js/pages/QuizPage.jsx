@@ -6,6 +6,7 @@ import axios from "axios";
 const QuizPage = () => {
     const [randomQuiz, setRandomQuiz] = useState(null);
     const [quizStarted, setQuizStarted] = useState(false);
+    const [error, setError] = useState(null);
     const location = useLocation();
     const quiz = location.state?.quiz ?? randomQuiz;
 
@@ -14,14 +15,19 @@ const QuizPage = () => {
             const response = await axios.get("/api/quizzes");
             const quizzes = response.data;
             if (quizzes.length > 0) {
-                const randomQuiz =
-                    quizzes[Math.floor(Math.random() * quizzes.length)];
+                const randomQuiz = quizzes[Math.floor(Math.random() * quizzes.length)];
                 setRandomQuiz(randomQuiz);
             } else {
-                console.error("No quizzes found.");
+                setError("No quizzes found.");
+                setTimeout(() => {
+                    window.location.reload();
+                }, 1000);
             }
         } catch (err) {
-            console.error("Error fetching quizzes:", err);
+            setError("Error fetching quizzes.");
+            setTimeout(() => {
+                window.location.reload();
+            }, 1000); 
         }
     };
 
@@ -43,6 +49,10 @@ const QuizPage = () => {
             myButton.className = "play__btn_active";
         }
     };
+
+    if (error) {
+        return <p>Loading...</p>;
+    }
 
     return (
         <div>
@@ -69,8 +79,8 @@ const QuizPage = () => {
                         </div>
                         <div className="quiz__image">
                             <img
-                                src="https://placehold.co/640x360"
-                                alt="placeholder"
+                                src={quiz.image}
+                                alt="quiz image"
                             />
                         </div>
                     </div>
@@ -87,7 +97,7 @@ const QuizPage = () => {
                     {quizStarted && <Question quizId={quiz.id} />}
                 </div>
             ) : (
-                <p>loading</p>
+                <p>Loading...</p>
             )}
         </div>
     );

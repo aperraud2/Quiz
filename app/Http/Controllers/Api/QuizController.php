@@ -15,7 +15,17 @@ class QuizController extends Controller
         ->get();
 
 
-
         return $quizzes;
     }
+
+    public function fetchQuizWithAnswers($quizId)
+
+    {
+        $quizWithAnswers = Quiz::with('questions', 'questions.answers')->find($quizId);
+
+        return $quizWithAnswers;
+
+    }
 }
+
+

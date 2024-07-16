@@ -172,7 +172,147 @@ class AnswerSeeder extends Seeder
             'name' => 'False',
             'correct' => 1,
             'question_id' => 15
-            ]
+            ],
+            [
+            'name' => 'François Mitterrand',
+            'correct' => 0,
+            'question_id' => 16
+            ],
+            [
+            'name' => 'Valéry Giscard d\'Estaing',
+            'correct' => 0,
+            'question_id' => 16
+            ],
+            [
+            'name' => 'Georges Pompidou',
+            'correct' => 1,
+            'question_id' => 16
+            ],
+            [
+            'name' => 'Jacques Chirac',
+            'correct' => 0,
+            'question_id' => 16
+            ],
+            [
+            'name' => 'Jimmy Carter',
+            'correct' => 0,
+            'question_id' => 17
+            ],
+            [
+            'name' => 'Ronald Reagan',
+            'correct' => 1,
+            'question_id' => 17
+            ],
+            [
+            'name' => 'Gerald Ford',
+            'correct' => 0,
+            'question_id' => 17
+            ],
+            [
+            'name' => 'Lyndon B. Johnson',
+            'correct' => 0,
+            'question_id' => 17
+            ],
+            [
+            'name' => 'United Kingdom',
+            'correct' => 1,
+            'question_id' => 18
+            ],
+            [
+            'name' => 'France',
+            'correct' => 0,
+            'question_id' => 18
+            ],
+            [
+            'name' => 'Netherlands',
+            'correct' => 0,
+            'question_id' => 18
+            ],
+            [
+            'name' => 'United States',
+            'correct' => 0,
+            'question_id' => 18
+            ],
+            [
+            'name' => 'Jessica Alba',
+            'correct' => 0,
+            'question_id' => 19
+            ],
+            [
+            'name' => 'Justin Timberlake',
+            'correct' => 0,
+            'question_id' => 19
+            ],
+            [
+            'name' => 'Pitbull',
+            'correct' => 1,
+            'question_id' => 19
+            ],
+            [
+            'name' => 'Alicia Keys',
+            'correct' => 0,
+            'question_id' => 19
+            ],
+            [
+            'name' => 'Juan Carlos I',
+            'correct' => 1,
+            'question_id' => 20
+            ],
+            [
+            'name' => 'Felipe V',
+            'correct' => 0,
+            'question_id' => 20
+            ],
+            [
+            'name' => 'Alfonso XIII',
+            'correct' => 0,
+            'question_id' => 20
+            ],
+            [
+            'name' => 'Juan IV',
+            'correct' => 0,
+            'question_id' => 20
+            ],
+            [
+            'name' => 'Fog lights',
+            'correct' => 0,
+            'question_id' => 21
+            ],
+            [
+            'name' => 'Seat belt',
+            'correct' => 0,
+            'question_id' => 21
+            ],
+            [
+            'name' => 'Child car seat',
+            'correct' => 0,
+            'question_id' => 21
+            ],
+            [
+            'name' => 'Airbag',
+            'correct' => 1,
+            'question_id' => 21
+            ],
+            [
+            'name' => 'Raging Bull',
+            'correct' => 0,
+            'question_id' => 22
+            ],
+            [
+            'name' => 'Ordinary People',
+            'correct' => 1,
+            'question_id' => 22
+            ],
+            [
+            'name' => 'The Elephant Man',
+            'correct' => 0,
+            'question_id' => 22
+            ],
+            [
+            'name' => 'Coal Miner\'s Daughter',
+            'correct' => 0,
+            'question_id' => 22
+            ]            
         ];
         
 

@@ -165,6 +165,9 @@ h2 {
 
         .card__content {
             .card__info {
+                display: flex;
+                flex-direction: column;
+                
                 .card__title {
                     font-weight: bold;
                     color: $primary-color;
@@ -173,6 +176,7 @@ h2 {
 
                 .card__description {
                     font-size: 0.9em;
+                    margin-bottom: 20px;
                 }
 
                 .card__category,

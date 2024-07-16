@@ -8,7 +8,7 @@ const QuizCard = ({ quiz }) => {
             <Link to='/quiz' state={{ quiz: quiz }}>
                 <div className="card__content">               
                     <div className="card__info">
-                        <div className="card__image"><img src="https://placehold.co/160x90" alt="placeholder"/></div>
+                        <div className="card__image"><img src={quiz.image} alt="quiz image"/></div>  
                         <div className="card__title">{quiz.name}</div>
                         <div className="card__description">{quiz.description}</div>
                         <div className="card__category">
@@ -17,7 +17,7 @@ const QuizCard = ({ quiz }) => {
                         ))}
                     </div>
                         <div className="card__difficulty">{quiz.difficulty?.name}</div>
-                        <div className="card__attempts">Attempts: {quiz.attempts ?? 0}</div>
+                        {/* <div className="card__attempts">Attempts: {quiz.attempts ?? 0}</div> */}
                     </div>                                                   
                 </div>
             </Link>

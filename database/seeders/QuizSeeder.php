@@ -22,22 +22,26 @@ class QuizSeeder extends Seeder
             [
             'name' => 'Movies Quiz',
             'description' => 'Quiz about movies',
-            'difficulty_id' => 2      
+            'difficulty_id' => 2,
+            'image' => "http://squizgame.test/public/images/moviequiz.jpg"     
             ],            
             [
             'name' => "Geography - True or False",
-            'description' => 'Quiz about geography',
-            'difficulty_id' => 3      
+            'description' => 'Test your knowledge of world geography with this true or false quiz ',
+            'difficulty_id' => 3,     
+            'image' => "http://squizgame.test/public/images/quiz_geographytrueorfalse.png"     
             ],
             [
             'name' => 'History Quiz',
             'description' => 'Quiz about history',
-            'difficulty_id' => 2      
+            'difficulty_id' => 2,      
+            'image' => "http://squizgame.test/public/images/historyquiz.jpg"
             ],            
             [
             'name' => '1981',
-            'description' => 'Year 1981',
-            'difficulty_id' => 4
+            'description' => 'How well do you know the events that took place in 1981?',
+            'difficulty_id' => 4,
+            'image' => "http://squizgame.test/public/images/1981quiz.JPG"
             ]
             ];
 
