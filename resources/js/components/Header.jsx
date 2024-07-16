@@ -45,6 +45,13 @@ const Header = () => {
         setErrorMessage(error);
     };
 
+    const handleProfileClick = (e) => {
+        if (!user) {
+            e.preventDefault();
+            setIsCreateAccountPopupVisible(true);
+        }
+    };
+
     return (
         <div>
             <header>
@@ -82,7 +89,12 @@ const Header = () => {
                             <Link to="/">Homepage</Link>
                         </li>
                         <li>
+                            {user?
                             <Link to="/user">My Profile</Link>
+                            : 
+                            <a href="/" onClick={handleProfileClick}>My Profile</a>
+                            }
+
                         </li>
                         <li>
                             <Link to="/quiz">Quick Play</Link>
