@@ -84,14 +84,14 @@ const QuizSearch = ({ onSearch }) => {
                     <option key={difficulty.id} value={difficulty.name}>{difficulty.name}</option>
                 ))}
             </select>
-            <label className="searchQuiz__show">
+            {/* <label className="searchQuiz__show">
                 <input
                     type="checkbox"
                     checked={hideDone}
                     onChange={handleHideDoneChange}
                 />
                 Hide Completed Quizzes
-            </label>
+            </label> */}
         </div>
     );
 };

@@ -77,8 +77,9 @@ const QuizPage = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="quiz__image">
+                        <div>
                             <img
+                                className="quiz__image"
                                 src={quiz.image}
                                 alt="quiz image"
                             />

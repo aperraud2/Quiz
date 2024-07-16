@@ -37,7 +37,7 @@ const App = () => {
                         <Route path="/quiz" element={<QuizPage />} />
                         {user?
                         <Route path="/user" element={<Profile />} />
-                        : ""} 
+                        : ""}
                         <Route path="/about" element={<About />} />
                     </Routes>
                 </BrowserRouter>

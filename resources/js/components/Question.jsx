@@ -50,13 +50,12 @@ const Question = ({ quizId }) => {
 
     const confirmFinishYes = async () => {
         setConfirmationPopup(false);
-
+        document.getElementById('finishButton').className = "finish__button_hide";
         let correctAnswers = 0;
 
         try {
             const response = await axios.get(`/api/quiz/${quizId}`);
             const quizWithAnswers = response.data;
-            console.log(quizWithAnswers);
 
             for (const question of questions) {
                 if (question.type === 1) {
@@ -108,11 +107,11 @@ const Question = ({ quizId }) => {
     if (loading) return <p>Loading questions...</p>;
     if (error) return <p>{error}</p>;
 
-    useEffect(() => {
-        if (score) {
-            // saving of the score
-        }
-    }, [score])
+    // useEffect(() => {
+    //     if (score) {
+    //         // saving of the score
+    //     }
+    // }, [score])
 
     return (
         <div>
@@ -149,7 +148,7 @@ const Question = ({ quizId }) => {
                 </div>
             ))}
             <div className="finish__container">
-                <button className="finish__button" onClick={handleFinishClick}>
+                <button className="finish__button" id="finishButton" onClick={handleFinishClick}>
                     Finish Quiz
                 </button>
             </div>
@@ -164,7 +163,7 @@ const Question = ({ quizId }) => {
             )}
             {score !== null && (
                 <div className="score__container">
-                    <p>
+                    <p className="score__results">
                         Your score: {score} / {questions.length}
                     </p>
                 </div>
