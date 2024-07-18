@@ -45,7 +45,7 @@ class QuizSeeder extends Seeder
             ],
             [
             'name' => 'Česko',
-            'description' => 'How well do you the Czech Republic?',
+            'description' => 'How well do you know the Czech Republic?',
             'difficulty_id' => 4,
             'image' => "/images/quizczechia.JPG"
             ]
